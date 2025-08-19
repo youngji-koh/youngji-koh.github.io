@@ -221,9 +221,9 @@ export default function PortfolioSite() {
               <p>
                 Broadly, I aim to (1) model daily routines and mental states from ambient,
                 longitudinal signals, (2) enable self-reflection and early risk detection,
-                and (3) deliver <em>comorbidity-aware</em> interventions. I work closely with
-                clinicians and run field deployments to study real-world use, while paying
-                particular attention to privacy, transparency, and responsible ML.
+                and (3) deliver <em>comorbidity-aware</em> interventions. I run field deployments to 
+                study real-world use, informed by clinical perspectives, while paying particular 
+                attention to privacy, transparency, and responsible ML.
               </p>
 
               <div>
