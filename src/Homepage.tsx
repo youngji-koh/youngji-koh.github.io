@@ -139,7 +139,7 @@ export default function PortfolioSite() {
             <AnchorLink href="#about">About</AnchorLink>
             <AnchorLink href="#publications">Publications</AnchorLink>
             <AnchorLink href="#projects">Projects</AnchorLink>
-            <a href={profile.cvUrl} className="font-medium" target="_blank" rel="noreferrer">CV</a>
+            {/* <a href={profile.cvUrl} className="font-medium" target="_blank" rel="noreferrer">CV</a> */}
           </div>
         </nav>
       </header>
@@ -297,7 +297,7 @@ export default function PortfolioSite() {
                 <div className="flex flex-wrap items-center gap-3">
                   <Badge code={p.code} />
                   <div className="text-[13px] uppercase tracking-wide text-gray-500">{p.type}</div>
-                  <div className="ml-auto text-sm text-gray-500">{p.year}</div>
+                  {/* <div className="ml-auto text-sm text-gray-500">{p.year}</div> */}
                 </div>
 
                 {/* 제목 (링크 가능) */}
@@ -315,6 +315,36 @@ export default function PortfolioSite() {
                     p.title
                   )}
                 </div>
+
+                {/* 리소스 버튼 영역 */}
+              <div className="mt-1 flex flex-wrap items-center gap-1.5">
+                {/* PDF 버튼 - Sky tone */}
+                {p.pdf && (
+                  <a
+                    href={p.pdf}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center rounded-full border border-sky-300 bg-sky-50 px-2.5 py-0.5
+                              text-xs font-medium text-sky-700 hover:bg-sky-100 transition"
+                  >
+                    PDF
+                  </a>
+                )}
+
+                {/* Slides 버튼 - Indigo tone */}
+                {p.slides && (
+                  <a
+                    href={p.slides}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center rounded-full border border-indigo-300 bg-indigo-50 px-2.5 py-0.5
+                              text-xs font-medium text-indigo-700 hover:bg-indigo-100 transition"
+                  >
+                    Slides
+                  </a>
+                )}
+                            </div>
+
 
                 {/* 저자 / 메타 */}
                 <div className="text-sm text-gray-600">

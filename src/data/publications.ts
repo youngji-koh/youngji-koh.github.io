@@ -7,6 +7,8 @@ export type Publication = {
   meta: string;
   year: number;
   href?: string;
+  pdf?: string;      // 예: "/pdfs/paper.pdf"
+  slides?: string;   // 예: "/slides/talk.pdf" 또는 구글슬라이드 공유 링크
 };
 
 // 학회/저널 코드 → 배지 클래스 매핑
@@ -38,7 +40,8 @@ export const publications: Publication[]  = [
     ],
     meta: "UbiComp '25 • Espoo, Finland (Oct 14–16, 2025)",
     year: 2025,
-    href: "#"
+    href: "#",
+    pdf: "files/publication/pdf/koh2025harnessing.pdf"
   },
   {
     type: "Conference",
@@ -56,7 +59,8 @@ export const publications: Publication[]  = [
     ],
     meta: "CSCW '25 • Bergen, Norway (Oct 18–22, 2025)",
     year: 2025,
-    href: "#"
+    href: "#",
+    pdf: "files/publication/pdf/lee2025in.pdf"
   },
   {
     type: "Conference",
@@ -66,7 +70,9 @@ export const publications: Publication[]  = [
     authors: ["Jieun Lim*", "Youngji Koh*", "Auk Kim", "Uichin Lee"],
     meta: "CHI '24 • Honolulu, USA (May 11–16, 2024)",
     year: 2024,
-    href: "https://dl.acm.org/doi/10.1145/3613904.3642846"
+    href: "https://dl.acm.org/doi/10.1145/3613904.3642846",
+    pdf: "files/publication/pdf/lim2024exploring.pdf",
+    slides: "/files/publication/slides/lim2024exploring.pdf"
   },
   {
     type: "Conference",
@@ -83,7 +89,8 @@ export const publications: Publication[]  = [
     ],
     meta: "CHI '24 • Honolulu, USA (May 11–16, 2024)",
     year: 2024,
-    href: "https://dl.acm.org/doi/10.1145/3613904.3642778"
+    href: "https://dl.acm.org/doi/10.1145/3613904.3642778",
+    pdf: "files/publication/pdf/kim2024interrupting.pdf"
   },
 //   {
 //     type: "Journal",
@@ -131,7 +138,8 @@ export const publications: Publication[]  = [
     authors: ["Hansoo Lee", "Sangwook Lee", "Youngji Koh", "Uichin Lee"],
     meta: "UIST 2022",
     year: 2022,
-    href: "https://dl.acm.org/doi/10.1145/3526114.3558714"
+    href: "https://dl.acm.org/doi/10.1145/3526114.3558714",
+    pdf: "files/publication/pdf/lee2022lvlinker.pdf",
   },
   {
     type: "Poster",
@@ -141,7 +149,8 @@ export const publications: Publication[]  = [
     authors: ["Nahyun Kwon", "Young-Ji Koh", "Uran Oh"],
     meta: "ASSETS 2019",
     year: 2019,
-    href: "https://dl.acm.org/doi/10.1145/3308561.3354620"
+    href: "https://dl.acm.org/doi/10.1145/3308561.3354620",
+    pdf: "files/publication/pdf/kwon2019supporting.pdf"
   },
 //   {
 //     type: "Poster",
