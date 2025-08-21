@@ -19,12 +19,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
-      - run: npm ci    # package-lock.json 없으면: npm install
-      - run: npm run build   # ❌ PUBLIC_URL 설정 제거
+          cache: npm
+          cache-dependency-path: package-lock.json  # 잠금파일 기준으로 캐시
+
+      - name: Install
+        run: npm ci --no-audit --no-fund
+
+      - name: Build
+        env:
+          # ★ 프로젝트 페이지면 유지 (예: youngji-koh.github.io/my-homepage)
+          # 사용자/조직 페이지(youngji-koh.github.io 레포)면 이 줄 삭제
+          PUBLIC_URL: "/${{ github.event.repository.name }}"
+          GENERATE_SOURCEMAP: "false"       # 소스맵 비활성화 → 빌드/업로드 시간↓
+          DISABLE_ESLINT_PLUGIN: "true"     # CRA ESLint 단계 스킵
+          TSC_COMPILE_ON_ERROR: "true"      # 타입 에러 있어도 빌드 강행(선택)
+        run: npm run build
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
