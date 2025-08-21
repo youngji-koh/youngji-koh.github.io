@@ -144,35 +144,52 @@ export default function PortfolioSite() {
         </nav>
       </header>
 
-      {/* Hero / Intro */}
-      <section className="max-w-6xl mx-auto px-4 md:px-6 pt-10 md:pt-16">
-        <div className="grid md:grid-cols-3 gap-8 items-start">
-          <div className="md:col-span-2">
-            <h1 className="text-3xl md:text-4xl font-bold leading-tight">
-              Hi, I’m <span style={{ color: ACCENT }}>Youngji! 👋 </span>
-            </h1>
-         <p className="mt-4 text-lg text-gray-700">
-            {/* 문자열 일부를 링크로 조립 */}
-            PhD Candidate in the{" "}
-            <a
-              href={profile.labUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-2 hover:opacity-90"
-              style={{ color: "#2563eb" }} // 원하면 테마색으로 교체
-            >
-              {profile.labName}
-            </a>
-            {" @KAIST"} <br />
-            I am interested in designing digital health technologies to support mental wellbeing <br />
-            through multimodal sensing & human-centered AI.
-          </p>
+    {/* Hero / Intro */}
+    <section className="max-w-6xl mx-auto px-4 md:px-6 pt-10 md:pt-16">
+      <div className="grid md:grid-cols-3 gap-8 items-start">
+
+        {/* 왼쪽 2칸: 아바타 + 텍스트 */}
+        <div className="md:col-span-2">
+          <div className="flex items-center gap-6">
+            {/* 프로필 아바타 */}
+            <img
+            src={process.env.PUBLIC_URL + "/profile.jpg"}
+            alt="Youngji Koh"
+            className="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover object-left shadow-lg"
+            />
+
+            {/* 인사말 + 소개 */}
+            <div>
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                Hi, I’m <span style={{ color: ACCENT }}>Youngji! 👋 </span>
+              </h1>
+              <p className="mt-4 text-lg text-gray-700">
+                PhD Candidate in the{" "}
+                <a
+                  href={profile.labUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:opacity-90"
+                  style={{ color: "#2563eb" }}
+                >
+                  {profile.labName}
+                </a>
+                {" @KAIST"} <br />
+                I am interested in designing digital health technologies to support mental wellbeing <br />
+                through multimodal sensing & human-centered AI.
+              </p>
+            </div>
+          </div>
+
+          {/* 링크 버튼들 */}
           <div className="mt-6 flex flex-wrap gap-3">
             <LinkBtn href={`mailto:${profile.email}`} IconComp={Icon.Mail}>Email</LinkBtn>
             <LinkBtn href={profile.github} IconComp={Icon.GitHub}>GitHub</LinkBtn>
             <LinkBtn href={profile.scholar} IconComp={Icon.Scholar}>Google Scholar</LinkBtn>
             <LinkBtn href={profile.cvUrl} IconComp={Icon.File}>Download CV</LinkBtn>
           </div>
+
+          {/* 관심사 */}
           <div className="mt-6">
             {profile.interests.map((it) => (
               <span
@@ -185,25 +202,26 @@ export default function PortfolioSite() {
               </span>
             ))}
           </div>
-
-          </div>
-          <div className="md:col-span-1">
-            <Card>
-              <h3 className="font-semibold">Education</h3>
-              <ul className="mt-3 space-y-3">
-                {profile.education.map((e, i) => (
-                  <li key={i} className="text-sm">
-                    <div className="font-medium">{e.degree}</div>
-                    <div className="text-gray-600">{e.org}</div>
-                    <div className="text-gray-500">{e.span}</div>
-                    {e.note && <div className="text-gray-500">{e.note}</div>}
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          </div>
         </div>
-      </section>
+
+        {/* 오른쪽 1칸: Education */}
+        <div className="md:col-span-1">
+          <Card>
+            <h3 className="font-semibold">Education</h3>
+            <ul className="mt-3 space-y-3">
+              {profile.education.map((e, i) => (
+                <li key={i} className="text-sm">
+                  <div className="font-medium">{e.degree}</div>
+                  <div className="text-gray-600">{e.org}</div>
+                  <div className="text-gray-500">{e.span}</div>
+                  {e.note && <div className="text-gray-500">{e.note}</div>}
+                </li>
+              ))}
+            </ul>
+          </Card>
+        </div>
+      </div>
+    </section>
 
       <main className="max-w-6xl mx-auto px-4 md:px-6">
        {/* About */}
