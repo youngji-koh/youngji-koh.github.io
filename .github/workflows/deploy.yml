@@ -18,26 +18,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Use Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "npm"
-
-      - name: Install
-        run: npm ci
-
-      - name: Build
-        env:
-          # CRA에서 서브경로 배포 안정화 (homepage 세팅이 있으면 생략 가능)
-          PUBLIC_URL: "/${{ github.event.repository.name }}"
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - run: npm ci    # package-lock.json 없으면: npm install
+      - run: npm run build   # ❌ PUBLIC_URL 설정 제거
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
 
@@ -48,6 +36,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4

@@ -174,8 +174,8 @@ export default function PortfolioSite() {
                 >
                   {profile.labName}
                 </a>
-                {" @KAIST"} <br />
-                I am interested in designing digital health technologies to support mental wellbeing <br />
+                {" @KAIST."} <br />
+                I am interested in designing digital health technologies to support mental wellbeing 
                 through multimodal sensing & human-centered AI.
               </p>
             </div>
