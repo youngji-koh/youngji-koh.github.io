@@ -32,20 +32,20 @@ export const profile: Profile = {
 
   education: [
     {
-      degree: "Ph.D. in Computer Science",
+      degree: "Ph.D. in School of Computing",
       org: "KAIST, Daejeon",
       span: "Sep 2021 — Present",
     //   note: "Interactive Computing Laboratory (Advisor: Prof. Uichin Lee)",
     },
     {
-      degree: "M.S. in Computer Science",
+      degree: "M.S. in School of Computing",
       org: "KAIST, Daejeon",
       span: "Sep 2019 — Aug 2021",
     //   note: "Software Architecture Laboratory (Advisor: Prof. Sungwon Kang)",
     },
     {
       degree:
-        "B.S. in Computer Science",
+        "B.S. in Computer Science and Engineering",
       org: "Ewha Womans University, Seoul",
       span: "Mar 2015 — Aug 2019",
     },

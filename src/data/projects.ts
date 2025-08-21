@@ -7,13 +7,18 @@ export type Project = {
   image?: string;
   org?: string;   // optional (없어도 오류 안남)
   tags?: string[]; // optional (없어도 오류 안남)
+  news?: {
+    outlet: string;
+    title: string;
+    url: string;
+  }[]; // optional (없어도 오류 안남)
 };
 
 // Projects (compact summaries + role)
 export const projects: Project[] = [
   {
     title:
-      "Development of an Early Prediction System for Complex Diseases and the Expansion of Telemedicine",
+      "Development of an Early Prediction System for Complex Diseases",
     role: "Lead Researcher",
     when: "Jun 2025 – Dec 2025",
     org: "Institute for ICT Planning & Evaluation (IITP)",
@@ -113,6 +118,13 @@ export const projects: Project[] = [
     "🏠 Smart Home",
     "🧑‍💻 Human-Centered Computing",
     "💊 Digital Health"
+  ],
+   news: [
+    {
+      outlet: "Yonhap News",
+      title: "1인 가구 마음건강 챙기는 스마트 스피커 기술 개발",
+      url: "https://www.yna.co.kr/view/AKR20240924040100063?input=1195m"
+    }
   ],
 },
 

@@ -160,7 +160,7 @@ export default function PortfolioSite() {
             {/* 인사말 + 소개 */}
             <div>
               <h1 className="text-3xl md:text-4xl font-bold leading-tight">
-                Hi, I’m <span style={{ color: ACCENT }}>Youngji! 👋 </span>
+                Hi, I’m <span style={{ color: ACCENT }}>Youngji!💫 </span>
               </h1>
               <p className="mt-4 text-lg text-gray-700">
                 PhD Candidate in the{" "}
@@ -195,18 +195,21 @@ export default function PortfolioSite() {
 
           {/* 관심사 */}
           <div className="mt-6">
-            {profile.interests.map((it) => (
-              <span
-                key={it}
-                className="inline-flex items-center rounded-full px-3 py-1 text-sm mr-2 mb-2 border"
-                style={{ background: ACCENT2_SOFT, borderColor: ACCENT2, color: ACCENT2 }}
-              >
-                <span className="mr-1">{interestIcons[it] ?? "✨"}</span>
-                {it}
-              </span>
-            ))}
+            <h4 className="text-sm font-semibold text-gray-800 mb-2">🔎 Research Interests</h4>
+            <div className="flex flex-wrap">
+              {profile.interests.map((it) => (
+                <span
+                  key={it}
+                  className="inline-flex items-center rounded-full px-3 py-1 text-sm mr-2 mb-2 border"
+                  style={{ background: ACCENT2_SOFT, borderColor: ACCENT2, color: ACCENT2 }}
+                >
+                  <span className="mr-1">{interestIcons[it] ?? "✨"}</span>
+                  {it}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        </div> 
 
         {/* 오른쪽 1칸: Education */}
         <div className="md:col-span-1">
@@ -270,12 +273,13 @@ export default function PortfolioSite() {
                 My recent work has appeared in venues such as CHI, IMWUT/UbiComp, and CSCW.
               </p> */}
             </div>
+            
           </Card>
         </Section>
 
         
        {/* News */}
-       <Section id="news" title="News">
+       <Section id="news" title="Recent News">
         <div className="space-y-4">
           {news.map((item: NewsItem, idx) => (
             <div key={idx} className="flex items-start">
@@ -477,24 +481,48 @@ export default function PortfolioSite() {
           </ul>
         )}
 
-        {/* 태그: brief 바로 밑으로 붙도록 */}
-        {prj.tags?.length ? (
-          <div className="mt-4 flex flex-wrap gap-2">
-            {prj.tags.map((t: string) => (
-              <span
-                key={t}
-                className="text-xs rounded-full px-2 py-0.5 border"
-                style={{
-                  background: "#f9fafb",
-                  borderColor: ACCENT,
-                  color: ACCENT,
-                }}
-              >
-                {t}
-              </span>
-            ))}
+        {/* Press Coverage */}
+        {prj.news?.length ? (
+          <div className="mt-4">
+            <h4 className="text-sm font-semibold text-gray-800">📰 Press Coverage</h4>
+            <div className="mt-1 flex flex-wrap gap-2">
+              {prj.news.map((n: any, idx: number) => (
+                <a
+                  key={idx}
+                  href={n.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center rounded-full border border-red-300 bg-red-50 px-2.5 py-0.5
+                            text-xs font-medium text-red-700 hover:bg-red-100 transition"
+                >
+                  {n.outlet}
+                </a>
+              ))}
+            </div>
           </div>
         ) : null}
+            {/* 태그: brief 바로 밑으로 붙도록 */}
+            {prj.tags?.length ? (
+              <div className="mt-4">
+                <h4 className="text-sm font-semibold text-gray-800">🔑 Keywords</h4>
+                <div className="mt-1 flex flex-wrap gap-2">
+                  {prj.tags.map((t: string) => (
+                    <span
+                      key={t}
+                      className="text-xs rounded-full px-2 py-0.5 border"
+                      style={{
+                        background: "#f9fafb",
+                        borderColor: ACCENT,
+                        color: ACCENT,
+                      }}
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
       </div>
     </div>
 
