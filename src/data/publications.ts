@@ -14,12 +14,10 @@ export type Publication = {
 // 학회/저널 코드 → 배지 클래스 매핑
 export const venueColor: Record<string, string> = {
   CHI: "bg-rose-100 text-rose-700 border-rose-200",
-  IMWUT: "bg-emerald-100 text-emerald-700 border-emerald-200",
   CSCW: "bg-amber-100 text-amber-800 border-amber-200",
-  UIST: "bg-sky-100 text-sky-700 border-sky-200",
+  IMWUT: "bg-sky-100 text-lime-700 border-lime-200",
   ASSETS: "bg-fuchsia-100 text-fuchsia-700 border-fuchsia-200",
-  KSC: "bg-slate-100 text-slate-700 border-slate-200",
-  VIS: "bg-indigo-100 text-indigo-700 border-indigo-200",
+  UIST: "bg-slate-100 text-slate-700 border-slate-200",
   IEEE: "bg-cyan-100 text-cyan-700 border-cyan-200",
 };
 
