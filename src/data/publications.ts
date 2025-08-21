@@ -146,7 +146,7 @@ export const publications: Publication[]  = [
     code: "ASSETS",
     title:
       "Supporting Object-level Exploration of Artworks by Touch for People with Visual Impairments",
-    authors: ["Nahyun Kwon", "Young-Ji Koh", "Uran Oh"],
+    authors: ["Nahyun Kwon", "Youngji Koh", "Uran Oh"],
     meta: "ASSETS 2019",
     year: 2019,
     href: "https://dl.acm.org/doi/10.1145/3308561.3354620",
