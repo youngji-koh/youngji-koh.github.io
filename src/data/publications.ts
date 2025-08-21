@@ -30,7 +30,7 @@ export const publications: Publication[]  = [
     type: "Conference",
     code: "IMWUT",
     title:
-      "Home IoT for Self-tracking Emotional Wellbeing: Behavioral Patterns, Self-Reflection, and Privacy Concerns",
+      "Harnessing Home IoT for Self-tracking Emotional Wellbeing: Behavioral Patterns, Self-Reflection, and Privacy Concerns",
     authors: [
       "Youngji Koh",
       "Chanhee Lee",
