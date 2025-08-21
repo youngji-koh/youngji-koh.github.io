@@ -5,7 +5,6 @@ import { publications, type Publication, venueColor } from "./data/publications"
 import { projects } from "./data/projects";
 
 
-
 // === Quick Notes ===
 // - Single-file React component with Tailwind CSS classes.
 // - Change ACCENT and ACCENT_SOFT to switch highlight colors.
@@ -186,7 +185,12 @@ export default function PortfolioSite() {
             <LinkBtn href={`mailto:${profile.email}`} IconComp={Icon.Mail}>Email</LinkBtn>
             <LinkBtn href={profile.github} IconComp={Icon.GitHub}>GitHub</LinkBtn>
             <LinkBtn href={profile.scholar} IconComp={Icon.Scholar}>Google Scholar</LinkBtn>
-            <LinkBtn href={profile.cvUrl} IconComp={Icon.File}>Download CV</LinkBtn>
+            <LinkBtn
+              href={`#/viewer?url=${encodeURIComponent(profile.cvUrl)}&title=${encodeURIComponent("CV")}`}
+              IconComp={Icon.File}
+            >
+              Download CV
+            </LinkBtn>
           </div>
 
           {/* 관심사 */}
@@ -339,7 +343,7 @@ export default function PortfolioSite() {
                   {/* PDF 버튼 - Sky tone */}
                   {p.pdf && (
                     <a
-                      href={p.pdf}
+                      href={`#/viewer?url=${encodeURIComponent(p.pdf)}&title=${encodeURIComponent(p.title + " PDF")}`}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center rounded-full border border-sky-300 bg-sky-50 px-2.5 py-0.5
@@ -352,7 +356,7 @@ export default function PortfolioSite() {
                   {/* Slides 버튼 - Indigo tone */}
                   {p.slides && (
                     <a
-                      href={p.slides}
+                      href={`#/viewer?url=${encodeURIComponent(p.slides)}&title=${encodeURIComponent(p.title + " Slides")}`}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center rounded-full border border-indigo-300 bg-indigo-50 px-2.5 py-0.5
