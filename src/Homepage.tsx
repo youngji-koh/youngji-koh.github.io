@@ -335,33 +335,33 @@ export default function PortfolioSite() {
                 </div>
 
                 {/* 리소스 버튼 영역 */}
-              <div className="mt-1 flex flex-wrap items-center gap-1.5">
-                {/* PDF 버튼 - Sky tone */}
-                {p.pdf && (
-                  <a
-                    href={p.pdf}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center rounded-full border border-sky-300 bg-sky-50 px-2.5 py-0.5
-                              text-xs font-medium text-sky-700 hover:bg-sky-100 transition"
-                  >
-                    PDF
-                  </a>
-                )}
+                <div className="mt-1 mb-2 flex flex-wrap items-center gap-1.5">
+                  {/* PDF 버튼 - Sky tone */}
+                  {p.pdf && (
+                    <a
+                      href={p.pdf}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center rounded-full border border-sky-300 bg-sky-50 px-2.5 py-0.5
+                                text-xs font-medium text-sky-700 hover:bg-sky-100 transition"
+                    >
+                      PDF
+                    </a>
+                  )}
 
-                {/* Slides 버튼 - Indigo tone */}
-                {p.slides && (
-                  <a
-                    href={p.slides}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center rounded-full border border-indigo-300 bg-indigo-50 px-2.5 py-0.5
-                              text-xs font-medium text-indigo-700 hover:bg-indigo-100 transition"
-                  >
-                    Slides
-                  </a>
-                )}
-                            </div>
+                  {/* Slides 버튼 - Indigo tone */}
+                  {p.slides && (
+                    <a
+                      href={p.slides}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center rounded-full border border-indigo-300 bg-indigo-50 px-2.5 py-0.5
+                                text-xs font-medium text-indigo-700 hover:bg-indigo-100 transition"
+                    >
+                      Slides
+                    </a>
+                  )}
+                </div>
 
 
                 {/* 저자 / 메타 */}
