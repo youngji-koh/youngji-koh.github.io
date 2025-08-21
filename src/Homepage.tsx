@@ -149,16 +149,17 @@ export default function PortfolioSite() {
 
         {/* 왼쪽 2칸: 아바타 + 텍스트 */}
         <div className="md:col-span-2">
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
             {/* 프로필 아바타 */}
             <img
-            src={process.env.PUBLIC_URL + "/profile.jpg"}
-            alt="Youngji Koh"
-            className="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover object-left shadow-lg"
+              src={process.env.PUBLIC_URL + "/profile.jpg"}
+              alt="Youngji Koh"
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-left shadow-lg
+                        self-center md:self-auto"  // 모바일 중앙 정렬
             />
 
             {/* 인사말 + 소개 */}
-            <div>
+            <div className="mt-2 md:mt-0 text-center md:text-left">  {/* 모바일에서 중앙 정렬 */}
               <h1 className="text-3xl md:text-4xl font-bold leading-tight">
                 Hi, I’m <span style={{ color: ACCENT }}>Youngji!💫 </span>
               </h1>
@@ -181,7 +182,7 @@ export default function PortfolioSite() {
           </div>
 
           {/* 링크 버튼들 */}
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
             <LinkBtn href={`mailto:${profile.email}`} IconComp={Icon.Mail}>Email</LinkBtn>
             <LinkBtn href={profile.github} IconComp={Icon.GitHub}>GitHub</LinkBtn>
             <LinkBtn href={profile.scholar} IconComp={Icon.Scholar}>Google Scholar</LinkBtn>
@@ -195,8 +196,10 @@ export default function PortfolioSite() {
 
           {/* 관심사 */}
           <div className="mt-6">
-            <h4 className="text-sm font-semibold text-gray-800 mb-2">🔎 Research Interests</h4>
-            <div className="flex flex-wrap">
+            <h4 className="text-sm font-semibold text-gray-800 mb-2 text-center md:text-left">
+              🔎 Research Interests
+            </h4>
+            <div className="flex flex-wrap justify-center md:justify-start">
               {profile.interests.map((it) => (
                 <span
                   key={it}
@@ -209,7 +212,8 @@ export default function PortfolioSite() {
               ))}
             </div>
           </div>
-        </div> 
+        </div>
+
 
         {/* 오른쪽 1칸: Education */}
         <div className="md:col-span-1">
