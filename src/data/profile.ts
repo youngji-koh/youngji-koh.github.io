@@ -23,7 +23,7 @@ export const profile: Profile = {
   email: "youngji@kaist.ac.kr",
   github: "https://github.com/youngji-koh",
   scholar: "https://scholar.google.com/citations?user=9YItZ30AAAAJ&hl=en&oi=ao",
-  cvUrl: "/files/CV.pdf",
+  cvUrl: "/files/CV_Youngji Koh.pdf",
   labName: "Interactive Computing Lab",
   labUrl: "https://ic.kaist.ac.kr",
   tagline:
