@@ -119,13 +119,43 @@ export const projects: Project[] = [
     "🧑‍💻 Human-Centered Computing",
     "💊 Digital Health"
   ],
-   news: [
-    {
-      outlet: "Yonhap News",
-      title: "1인 가구 마음건강 챙기는 스마트 스피커 기술 개발",
-      url: "https://www.yna.co.kr/view/AKR20240924040100063?input=1195m"
-    }
-  ],
+news: [
+  {
+    "outlet": "연합뉴스",
+    "title": "1인 가구 마음건강 챙기는 스마트 스피커 기술 개발",
+    "url": "https://www.yna.co.kr/view/AKR20240924040100063?input=1195m"
+  },
+  {
+    "outlet": "국민일보",
+    "title": "KAIST, 1인 가구 정신건강 돕는 스마트 스피커 개발",
+    "url": "https://www.kmib.co.kr/article/view.asp?arcid=0020555048"
+  },
+  {
+    "outlet": "헤럴드경제",
+    "title": "KAIST, 1인 가구 정신건강 챙기는 스마트 스피커 시스템 개발",
+    "url": "https://biz.heraldcorp.com/article/3843844"
+  },
+  {
+    "outlet": "매일경제",
+    "title": "카이스트, 1인 가구 정신건강 위한 스마트 스피커 시스템 개발",
+    "url": "https://www.mk.co.kr/news/it/11123474"
+  },
+  {
+    "outlet": "이데일리",
+    "title": "KAIST, 1인 가구 정신건강 돕는 '똑똑한' 스피커 시스템 개발",
+    "url": "https://www.edaily.co.kr/News/Read?newsId=01902406639023400&mediaCodeNo=257&OutLnkChk=Y"
+  },
+  {
+    "outlet": "전자신문",
+    "title": "‘당신의 마음, 어떤가요?’ KAIST, 1인 가구 정신건강 자가 추적 시스템 개발",
+    "url": "https://www.etnews.com/20240924000095"
+  },
+  {
+    "outlet": "데일리안",
+    "title": "“내 마음 건강 괜찮나?” KAIST, 정신건강 상태 자가 추적 시스템 개발",
+    "url": "https://www.dailian.co.kr/news/view/1410044/?sc=Naver"
+  }
+],
 },
 
 {
