@@ -38,7 +38,7 @@ export const publications: Publication[]  = [
     ],
     meta: "UbiComp '25 • Espoo, Finland (Oct 14–16, 2025)",
     year: 2025,
-    href: "#",
+    href: "https://dl.acm.org/doi/abs/10.1145/3749485",
     pdf: "files/publication/pdf/koh2025harnessing.pdf"
   },
   {
@@ -57,7 +57,7 @@ export const publications: Publication[]  = [
     ],
     meta: "CSCW '25 • Bergen, Norway (Oct 18–22, 2025)",
     year: 2025,
-    href: "#",
+    href: "https://doi.org/10.1145/3757533",
     pdf: "files/publication/pdf/lee2025in.pdf"
   },
   {
