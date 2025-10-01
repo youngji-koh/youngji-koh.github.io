@@ -283,7 +283,7 @@ export default function PortfolioSite() {
 
         
        {/* News */}
-       <Section id="news" title="Recent News">
+       <Section id="news" title="Latest News">
         <div className="space-y-4">
           {news.map((item: NewsItem, idx) => (
             <div key={idx} className="flex items-start">

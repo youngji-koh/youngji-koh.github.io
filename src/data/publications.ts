@@ -47,8 +47,8 @@ export const publications: Publication[]  = [
     title:
       "‘In That Small Space with Just the Two of Us’: User Experiences with Cumpa in a Robotic Counseling Center",
     authors: [
-      "Chanhee Lee",
-      "Eunki Joung",
+      "Chanhee Lee*",
+      "Eunki Joung*",
       "Youngji Koh",
       "Esther Kim",
       "Sohwi Son",
@@ -78,8 +78,8 @@ export const publications: Publication[]  = [
     title:
       "Interrupting for Microlearning: Understanding Perceptions and Interruptibility of Proactive Conversational Microlearning Services",
     authors: [
-      "Minyeong Kim",
-      "Jiwook Lee",
+      "Minyeong Kim*",
+      "Jiwook Lee*",
       "Youngji Koh",
       "Chanhee Lee",
       "Uichin Lee",
