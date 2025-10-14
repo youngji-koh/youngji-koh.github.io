@@ -39,7 +39,8 @@ export const publications: Publication[]  = [
     meta: "UbiComp '25 • Espoo, Finland (Oct 14–16, 2025)",
     year: 2025,
     href: "https://dl.acm.org/doi/abs/10.1145/3749485",
-    pdf: "files/publication/pdf/koh2025harnessing.pdf"
+    pdf: "files/publication/pdf/koh2025harnessing.pdf",
+    slides: "files/publication/slides/koh2025harnessing.pdf"
   },
   {
     type: "Conference",
