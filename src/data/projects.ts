@@ -81,6 +81,48 @@ export const projects: Project[] = [
     "📱 IoT & Wearables",
     "🧠 Mental Health",
     "🌐 Ubiquitous Computing"
+  ],  
+  news: [
+    {
+      outlet: "디지털타임스",
+      title: "우울·스트레스 등 나의 정신건강 상태는?… 가전 내 IoT 센서로 추적",
+      url: "https://www.dt.co.kr/article/12024097?ref=naver"
+    },
+    {
+      outlet: "데일리안",
+      title: "KAIST, 냉장고 사용 늘면 스트레스↑…IoT로 행동패턴 추적",
+      url: "https://www.dailian.co.kr/news/view/1562105/?sc=Naver"
+    },
+    {
+      outlet: "전자신문",
+      title: "'多 스트레스시 냉장고 사용 ↑' KAIST, IoT 센서로 정신건강 읽어",
+      url: "https://www.etnews.com/20251021000145"
+    },
+    {
+      outlet: "헤럴드경제",
+      title: "“나만 그런 줄 알았더니” 스트레스 많은 사람…냉장고 자주 연다",
+      url: "https://biz.heraldcorp.com/article/10597559?ref=naver"
+    },
+    {
+      outlet: "중앙일보",
+      title: "“스트레스 받으면 냉장고 많이 열었다”…IoT 센서로 정신 건강 추적한다",
+      url: "https://www.joongang.co.kr/article/25375559"
+    },
+    {
+      outlet: "조선일보",
+      title: "내가 냉장고를 자꾸 열었던 이유는... 극심한 스트레스 때문이었다",
+      url: "https://www.chosun.com/economy/science/2025/10/21/G7B5DAJRQFEZLHPBVKZ7ITWPOE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
+    },
+    {
+      outlet: "연합뉴스",
+      title: "“스트레스 많으면 냉장고 사용↑”…사물인터넷으로 측정",
+      url: "https://www.yna.co.kr/view/AKR20251021033000063?input=1195m"
+    },
+    {
+      outlet: "매일경제",
+      title: "새벽만 되면 거실로 나가는 남편…몰래 따라 나가보니",
+      url: "https://www.mk.co.kr/news/it/11446938"
+    }
   ],
 },
 
