@@ -125,11 +125,6 @@ function AnchorLink({ href, children }: any) {
 
 // ---------- MAIN PAGE ----------
 export default function PortfolioSite() {
-  // 🔸 equal contribution: 상단 레전드용 집계 (추가)
-  const cofirstCount = publications.reduce((acc, p) => {
-    return acc + (p.authors.some(a => a.includes("*")) ? 1 : 0);
-  }, 0);
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-white to-gray-50 text-gray-900">
       {/* Top Nav */}
@@ -329,7 +324,7 @@ export default function PortfolioSite() {
           {cofirstCount > 0 && (
             <div className="mb-3 text-xs text-gray-500">
               <span className="inline-block rounded-full border px-2 py-0.5 mr-2">*</span>
-              Co-first author (equal contribution) — {cofirstCount} paper{cofirstCount > 1 ? "s" : ""}
+              Co-first author (equal contribution) 
             </div>
           )}
 
