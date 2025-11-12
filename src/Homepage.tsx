@@ -322,11 +322,13 @@ export default function PortfolioSite() {
         <Section id="publications" title="Selected Publications">
           {/* 🔸 legend: 저자에 *가 하나라도 있으면 보임 (집계 변수 없이) */}
           {publications.some(p => p.authors.some(a => a.includes("*"))) && (
-            <div className="mb-3 text-xs text-gray-500">
-              <span className="inline-block rounded-full border px-2 py-0.5 mr-2">*</span>
-              co-author
-            </div>
-          )}
+          <div className="mb-3 text-xs text-gray-600">
+            <span className="inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5">
+              <span className="font-mono">*</span>
+              <span>equal contribution</span>
+            </span>
+          </div>
+        )}
 
           <div className="space-y-4">
             {publications.map((p: Publication, i: number) => (
