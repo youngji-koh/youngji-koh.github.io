@@ -399,10 +399,10 @@ export default function PortfolioSite() {
                     );
                   })}
 
-                  {/* 특정 논문일 때만 equal contribution 붙이기 */}
-                  {p.title.includes("Exploring Context-Aware Mental Health") && (
-                    <span className="ml-1 text-gray-500">(* equal contribution)</span>
-                  )}
+                {/* equal contribution 표시 */}
+                {p.authors.some((author) => author.includes("*")) && (
+                  <span className="ml-1 text-gray-500">(* equal contribution)</span>
+                )}
                 </div>
 
               <div className="text-sm text-gray-500 mt-1">{p.meta}</div>
