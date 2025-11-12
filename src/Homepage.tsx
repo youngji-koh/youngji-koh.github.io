@@ -125,6 +125,11 @@ function AnchorLink({ href, children }: any) {
 
 // ---------- MAIN PAGE ----------
 export default function PortfolioSite() {
+  // 🔸 equal contribution: 상단 레전드용 집계 (추가)
+  const cofirstCount = publications.reduce((acc, p) => {
+    return acc + (p.authors.some(a => a.includes("*")) ? 1 : 0);
+  }, 0);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-white to-gray-50 text-gray-900">
       {/* Top Nav */}
@@ -320,6 +325,14 @@ export default function PortfolioSite() {
 
         {/* Publications */}
         <Section id="publications" title="Selected Publications">
+          {/* 🔸 equal contribution 레전드 (추가) */}
+          {cofirstCount > 0 && (
+            <div className="mb-3 text-xs text-gray-500">
+              <span className="inline-block rounded-full border px-2 py-0.5 mr-2">*</span>
+              Co-first author (equal contribution) — {cofirstCount} paper{cofirstCount > 1 ? "s" : ""}
+            </div>
+          )}
+
           <div className="space-y-4">
             {publications.map((p: Publication, i: number) => (
               <div key={i} className="rounded-xl border border-gray-200 bg-white p-5">
@@ -386,9 +399,10 @@ export default function PortfolioSite() {
                     const myNames = ["youngji koh", "young-ji koh"];
 
                     const isMe = myNames.includes(clean);
+                    const hasStar = author.includes("*");
 
                     return (
-                      <span key={idx}>
+                      <span key={idx} title={hasStar ? "Co-first author" : undefined}>
                         {isMe ? (
                           <span className="font-semibold text-sky-500">{author}</span>
                         ) : (
@@ -399,10 +413,7 @@ export default function PortfolioSite() {
                     );
                   })}
 
-                {/* equal contribution 표시 */}
-                {p.authors.some((author) => author.includes("*")) && (
-                  <span className="ml-1 text-gray-500">(* equal contribution)</span>
-                )}
+                  {/* 🔻 per-item equal contribution 문구 제거 (요청 반영) */}
                 </div>
 
               <div className="text-sm text-gray-500 mt-1">{p.meta}</div>
@@ -467,7 +478,7 @@ export default function PortfolioSite() {
 
         {/* 불릿 설명: brief가 배열이라고 가정 */}
         {Array.isArray(prj.brief) ? (
-          <ul className="mt-3 list-disc pl-5 space-y-1 text-[15px] md:text-base text-gray-700">
+          <ul className="mt-3 list-disc pl-5 space-y-1 text+[15px] md:text-base text-gray-700">
             {prj.brief.map((line: string, idx: number) => (
               <li key={idx}>{line.replace(/^\*+/, "").trim()}</li>
             ))}
