@@ -320,11 +320,11 @@ export default function PortfolioSite() {
 
         {/* Publications */}
         <Section id="publications" title="Selected Publications">
-          {/* 🔸 equal contribution 레전드 (추가) */}
-          {cofirstCount > 0 && (
+          {/* 🔸 legend: 저자에 *가 하나라도 있으면 보임 (집계 변수 없이) */}
+          {publications.some(p => p.authors.some(a => a.includes("*"))) && (
             <div className="mb-3 text-xs text-gray-500">
               <span className="inline-block rounded-full border px-2 py-0.5 mr-2">*</span>
-              Co-first author (equal contribution) 
+              co-author
             </div>
           )}
 
@@ -332,7 +332,7 @@ export default function PortfolioSite() {
             {publications.map((p: Publication, i: number) => (
               <div key={i} className="rounded-xl border border-gray-200 bg-white p-5">
                 {/* ── 상단 메타 라인: 배지 + 연도/타입 */}
-                <div className="flex flex-wrap items-center gap-3">
+                <div className="flex flex_wrap items-center gap-3">
                   <Badge code={p.code} />
                   <div className="text-[13px] uppercase tracking-wide text-gray-500">{p.type}</div>
                   {/* <div className="ml-auto text-sm text-gray-500">{p.year}</div> */}
@@ -397,7 +397,7 @@ export default function PortfolioSite() {
                     const hasStar = author.includes("*");
 
                     return (
-                      <span key={idx} title={hasStar ? "Co-first author" : undefined}>
+                      <span key={idx} title={hasStar ? "Co-author" : undefined}>
                         {isMe ? (
                           <span className="font-semibold text-sky-500">{author}</span>
                         ) : (
@@ -408,7 +408,7 @@ export default function PortfolioSite() {
                     );
                   })}
 
-                  {/* 🔻 per-item equal contribution 문구 제거 (요청 반영) */}
+                  {/* per-item equal contribution 문구는 표시하지 않음 */}
                 </div>
 
               <div className="text-sm text-gray-500 mt-1">{p.meta}</div>
@@ -441,7 +441,7 @@ export default function PortfolioSite() {
             />
           </div>
         ) : (
-          <div className="relative w-full aspect-[4/3] rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+          <div className="relative w_full aspect-[4/3] rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
             <span className="text-6xl opacity-80 select-none">{prj.thumb}</span>
           </div>
         )}
