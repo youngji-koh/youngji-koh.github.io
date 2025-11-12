@@ -7,6 +7,11 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2025-12-01",
+    title: "IMWUT Paper Accepted 🎉",
+    desc: "Our paper, led by Hansoo Lee, was accepted to IMWUT",
+  },
+  {
     date: "2025-09-03",
     title: "K-Data Science Conference Award 🏆",
     desc: "Received the Creative Research Award at the K-Data Science Conference in Daegu, Korea.",

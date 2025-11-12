@@ -15,7 +15,7 @@ export type Publication = {
 export const venueColor: Record<string, string> = {
   CHI: "bg-rose-100 text-rose-700 border-rose-200",
   CSCW: "bg-amber-100 text-amber-800 border-amber-200",
-  IMWUT: "bg-sky-100 text-lime-700 border-lime-200",
+  "UbiComp/ISWC (IMWUT)": "bg-sky-100 text-lime-700 border-lime-200",
   ASSETS: "bg-fuchsia-100 text-fuchsia-700 border-fuchsia-200",
   UIST: "bg-slate-100 text-slate-700 border-slate-200",
   IEEE: "bg-cyan-100 text-cyan-700 border-cyan-200",
@@ -26,7 +26,24 @@ export const venueColor: Record<string, string> = {
 export const publications: Publication[]  = [
   {
     type: "Conference",
-    code: "IMWUT",
+    code: "UbiComp/ISWC (IMWUT)",
+    title:
+      "Leveraging Smartphone Human Interaction Routine Behavior Task Mining and Modeling for Daily Stress Monitoring",
+    authors: [
+      "Hansoo Lee",
+      "Taehyeon Park",
+      "Youngji Koh",
+      "Jaegil Lee",
+      "Uichin Lee",
+    ],
+    meta: "UbiComp '26",
+    year: 2026,
+    href: "https://dl.acm.org/doi/abs/10.1145/3749485",
+    pdf: "files/publication/pdf/lee2025leveraging.pdf",
+  },
+  {
+    type: "Conference",
+    code: "UbiComp/ISWC (IMWUT)",
     title:
       "Harnessing Home IoT for Self-tracking Emotional Wellbeing: Behavioral Patterns, Self-Reflection, and Privacy Concerns",
     authors: [
