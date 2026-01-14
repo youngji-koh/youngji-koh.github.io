@@ -531,7 +531,7 @@ export default function PortfolioSite() {
     </div>
 
     {/* 하단 포인트 바 */}
-    <div className="absolute inset-x-0 bottom-0 h-1" style={{ background: ACCENT }} />
+    {/* <div className="absolute inset-x-0 bottom-0 h-1" style={{ background: ACCENT }} /> */}
   </div>
 ))}
 
