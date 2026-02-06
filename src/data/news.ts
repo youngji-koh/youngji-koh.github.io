@@ -7,6 +7,11 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2025-01-16",
+    title: "CHI Paper Accepted 🎉",
+       desc: "Systematic review on stress sensing and intervention systems.\nTo be presented at CHI 2026 in Barcelona, Spain.",
+  },
+  {
     date: "2025-12-01",
     title: "IMWUT Paper Accepted 🎉",
     desc: "Our paper, led by Hansoo Lee, was accepted to IMWUT",
