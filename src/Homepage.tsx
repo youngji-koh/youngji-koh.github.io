@@ -282,12 +282,17 @@ export default function PortfolioSite() {
         </Section>
 
         
-       {/* News */}
-       <Section id="news" title="Latest News">
-        <div className="space-y-4">
+      {/* News */}
+      <Section id="news" title="Latest News">
+        {/* 3개 초과면 이 박스만 스크롤 */}
+        <div
+          className={[
+            "space-y-4",
+            news.length > 3 ? "max-h-56 overflow-y-auto pr-2" : "",
+          ].join(" ")}
+        >
           {news.map((item: NewsItem, idx) => (
             <div key={idx} className="flex items-start">
-              {/* 날짜 (Aug 2025 형식) */}
               <div className="w-20 text-sm text-gray-500">
                 {new Date(item.date).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -295,7 +300,6 @@ export default function PortfolioSite() {
                 })}
               </div>
 
-              {/* 본문 */}
               <div>
                 {item.link ? (
                   <a
@@ -309,12 +313,18 @@ export default function PortfolioSite() {
                 ) : (
                   <span className="font-medium">{item.title}</span>
                 )}
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+                {/* 줄바꿈(\n) 살리려면 이 클래스 추가 */}
+                <p className="text-gray-600 text-sm whitespace-pre-line">{item.desc}</p>
               </div>
             </div>
-              ))}
-          </div>
-        </Section>
+          ))}
+        </div>
+
+        {/* 아래는 선택: 3개 초과일 때만 아래쪽에 흐림 효과(스크롤 힌트) */}
+        {news.length > 3 && (
+          <div className="pointer-events-none -mt-6 h-6 bg-gradient-to-t from-gray-50 to-transparent" />
+        )}
+      </Section>
 
 
 
