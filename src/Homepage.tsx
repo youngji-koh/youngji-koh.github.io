@@ -5,10 +5,13 @@ import { publications, type Publication } from "./data/publications";
 import { projects } from "./data/projects";
 
 // === Design notes ===
-// Two-column, monochrome layout: a sticky left sidebar (photo, contact,
-// interests, education) beside a scrolling main column (news, publications,
-// projects). Palette limited to white / grey / charcoal. Content lives in
+// Two-column layout: a left sidebar (photo, contact, interests, education)
+// beside a main column (news, publications, projects). The palette is white /
+// grey / charcoal with a single deep-burgundy accent. Content lives in
 // src/data/*; this file only handles layout & styling.
+
+// The page's single accent: bio links, section markers, and small flourishes.
+const ACCENT = "#7f2f3b";
 
 // ---------- Inline icons (monochrome, inherit text color) ----------
 const Icon = {
@@ -48,7 +51,10 @@ const SideLink = ({ href, IconComp, children }: { href: string; IconComp: any; c
 );
 
 const SideHead = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-400">{children}</h2>
+  <h2 className="mb-3 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-400">
+    <span>{children}</span>
+    <span className="h-px flex-1 bg-neutral-200" />
+  </h2>
 );
 
 const Chip = ({ href, children }: { href?: string; children: React.ReactNode }) => {
@@ -61,14 +67,36 @@ const Chip = ({ href, children }: { href?: string; children: React.ReactNode }) 
   );
 };
 
+const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
+  <a
+    href={href}
+    className="transition-colors hover:text-neutral-900"
+    onClick={(e) => {
+      const el = document.querySelector(href);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }}
+  >
+    {children}
+  </a>
+);
+
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
     <section id={id} className="scroll-mt-24 border-t border-neutral-200 pt-9 first:border-0 first:pt-0">
-      <h2 className="text-[13px] font-bold uppercase tracking-[0.18em] text-neutral-800">{title}</h2>
+      <h2 className="flex items-center gap-2.5 text-[13px] font-bold uppercase tracking-[0.18em] text-neutral-800">
+        <span className="h-3.5 w-[3px] rounded-full" style={{ background: ACCENT }} />
+        {title}
+      </h2>
       <div className="mt-5">{children}</div>
     </section>
   );
 }
+
+const accentLink =
+  "underline decoration-[#7f2f3b]/30 underline-offset-2 transition-colors hover:decoration-[#7f2f3b]";
 
 // Display label overrides for venue tags (IMWUT papers appear at UbiComp).
 const venueLabel: Record<string, string> = { IMWUT: "UbiComp" };
@@ -85,18 +113,30 @@ export default function PortfolioSite() {
 
   return (
     <div className="min-h-screen bg-white text-neutral-900 antialiased">
-      <div className="mx-auto max-w-5xl px-6 py-10 md:py-14">
-        <div className="grid gap-10 md:grid-cols-[15rem_1fr] md:gap-12 lg:gap-16">
+      {/* Top nav */}
+      <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
+        <nav className="mx-auto flex max-w-5xl items-center justify-end gap-4 px-6 py-3.5">
+          <div className="flex items-center gap-5 text-sm text-neutral-500">
+            <NavLink href="#news">News</NavLink>
+            <NavLink href="#publications">Publications</NavLink>
+            <NavLink href="#projects">Projects</NavLink>
+          </div>
+        </nav>
+      </header>
+
+      <div id="top" className="mx-auto max-w-5xl px-6 py-10 md:py-12">
+        <div className="grid gap-10 md:grid-cols-[15rem_1fr] md:gap-12 lg:gap-14">
           {/* ---------------- Sidebar ---------------- */}
-          <aside className="space-y-7 self-start">
+          <aside className="space-y-7 self-start md:border-r md:border-neutral-200 md:pr-10">
             <div className="flex flex-col items-center text-center md:items-start md:text-left">
               <img
                 src={process.env.PUBLIC_URL + "/profile.jpg"}
                 alt={profile.name}
                 className="h-28 w-28 rounded-full object-cover object-left ring-1 ring-neutral-200"
               />
-              <h1 className="mt-4 text-xl font-bold tracking-tight">{profile.name}</h1>
-              <p className="mt-1 text-sm leading-snug text-neutral-500">
+              <h1 className="mt-4 font-serif text-2xl font-semibold tracking-tight text-neutral-900">{profile.name}</h1>
+              <span className="mt-2 block h-px w-10 self-center md:self-start" style={{ background: ACCENT }} />
+              <p className="mt-2.5 font-serif text-sm italic leading-snug text-neutral-500">
                 Postdoctoral Researcher
                 <br />
                 University of Tokyo, IIS Lab
@@ -144,9 +184,9 @@ export default function PortfolioSite() {
             {/* Bio */}
             <p className="text-[15px] leading-relaxed text-neutral-700">
               I&rsquo;m a postdoctoral researcher at the University of Tokyo&rsquo;s{" "}
-              <a href="https://iis-lab.org/" target="_blank" rel="noopener noreferrer" className="text-neutral-900 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-600">IIS Lab</a>,
+              <a href="https://iis-lab.org/" target="_blank" rel="noopener noreferrer" style={{ color: ACCENT }} className={`font-medium ${accentLink}`}>IIS Lab</a>,
               working with Prof. Koji Yatani, and recently completed my Ph.D. at KAIST&rsquo;s{" "}
-              <a href={profile.labUrl} target="_blank" rel="noopener noreferrer" className="text-neutral-900 underline decoration-neutral-300 underline-offset-2 hover:decoration-neutral-600">Interactive Computing Lab</a>{" "}
+              <a href={profile.labUrl} target="_blank" rel="noopener noreferrer" style={{ color: ACCENT }} className={`font-medium ${accentLink}`}>Interactive Computing Lab</a>{" "}
               under Prof. Uichin Lee. My research combines multimodal sensing and human-centered
               AI to support mental health and wellbeing, and I&rsquo;m now exploring human-AI
               interaction and agentic, multi-agent systems for mental healthcare.
@@ -158,7 +198,7 @@ export default function PortfolioSite() {
                 <ul className={`space-y-4 ${showAllNews ? "max-h-96 overflow-y-auto pr-2" : ""}`}>
                   {visibleNews.map((item: NewsItem, idx) => (
                     <li key={idx} className="flex flex-col gap-1 sm:flex-row sm:gap-5">
-                      <div className="flex-none text-sm text-neutral-400 sm:w-20">
+                      <div className="flex-none text-sm font-medium sm:w-20" style={{ color: ACCENT, opacity: 0.75 }}>
                         {new Date(item.date).toLocaleDateString("en-US", { year: "numeric", month: "short" })}
                       </div>
                       <div>

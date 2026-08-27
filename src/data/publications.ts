@@ -57,6 +57,8 @@ export const publications: Publication[]  = [
     meta: "CHI '26 • Barcelona, Spain (Apr 13–17, 2026)",
     year: 2026,
     href: "https://dl.acm.org/doi/10.1145/3772318.3791194",
+    pdf: "files/publication/pdf/koh2026exploring.pdf",
+    slides: "files/publication/slides/koh2026exploring.pdf",
   },
   {
     type: "Conference",
