@@ -27,14 +27,14 @@ export const profile: Profile = {
   labName: "Interactive Computing Lab",
   labUrl: "https://ic.kaist.ac.kr",
   tagline:
-    "PhD Candidate in the Interactive Computing Lab, KAIST — exploring digital health technologies for mental wellbeing",
+    "Ph.D. from KAIST (Interactive Computing Lab), incoming NRF Postdoctoral Fellow at the University of Tokyo (Prof. Koji Yatani's IIS Lab) — exploring digital health technologies for mental wellbeing",
 
 
   education: [
     {
       degree: "Ph.D. in School of Computing",
       org: "KAIST, Daejeon",
-      span: "Sep 2021 — Present",
+      span: "Sep 2021 — Aug 2026",
     //   note: "Interactive Computing Laboratory (Advisor: Prof. Uichin Lee)",
     },
     {
@@ -51,10 +51,10 @@ export const profile: Profile = {
     },
   ],
   interests: [
-    "Human-Centered Computing",
+    "Human-AI Interaction",
+    "Agentic & Multi-Agent Systems",
     "Multimodal Sensing",
     "Mental Health & Wellbeing",
-    "Digital Health",
-    "Data Visualization"
+    "Digital Health"
   ],
 };

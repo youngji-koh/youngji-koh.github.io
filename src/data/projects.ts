@@ -24,14 +24,14 @@ export const projects: Project[] = [
     org: "Institute for ICT Planning & Evaluation (IITP)",
     brief:
       ["Designed a comorbidity-aware framework that coordinates disorder-specific agents for diagnosis and intervention planning."],
-    // thumb: "🧠",
+    // thumb: "",
     image: "/files/project/columbus.png",
      tags: [
-      "🤖 LLM Agent",
-      "🧑‍💻 Human-Centered Computing",
-      "🔬 Multimodal Sensing",
-      "💊 Digital Health",
-      "🧠 Mental Health & Wellbeing"
+      "LLM Agent",
+      "Human-Centered Computing",
+      "Multimodal Sensing",
+      "Digital Health",
+      "Mental Health & Wellbeing"
     ],
   },
   // {
@@ -41,7 +41,7 @@ export const projects: Project[] = [
   //   org: "Institute for ICT Planning & Evaluation (IITP)",
   //   brief:
   //     ["Authored a survey on stress sensing & intervention; explored device+algorithm opportunities and real-world deployment."],
-  //   thumb: "📊",
+  //   thumb: "",
   // },
 
 
@@ -57,10 +57,10 @@ export const projects: Project[] = [
   ],
   image: "/files/project/Group 70.png",
   tags: [
-    "🤖 Machine Learning",
-    "🧠 Mental Health & Wellbeing",
-    "🔬 Multimodal Sensing",
-    "💊 Digital Health"
+    "Machine Learning",
+    "Mental Health & Wellbeing",
+    "Multimodal Sensing",
+    "Digital Health"
   ],
 },
 
@@ -77,10 +77,10 @@ export const projects: Project[] = [
   ],
   image: "/files/project/Group 52.png",
   tags: [
-    "📊 Data Visualization",
-    "📱 IoT & Wearables",
-    "🧠 Mental Health",
-    "🌐 Ubiquitous Computing"
+    "Data Visualization",
+    "IoT & Wearables",
+    "Mental Health",
+    "Ubiquitous Computing"
   ],  
   news: [
     {
@@ -128,18 +128,18 @@ export const projects: Project[] = [
 
 {
   title: "Robotic Counseling System for Mental Health Support",
-  role: "Research Contributor",
+  role: "Collaborator",
   when: "Feb 2023 - Oct 2024 ",
-  org: "",
+  org: "LG Electronics",
   brief: [
     "Supported a two-week field study with 20 participants assessing emotional awareness, engagement, and sense of place",
   ],
   image: "/files/project/lee2025in.bmp",
   tags: [
-    "🤖 Social Robots",
-    "🧠 Mental Health",
-    "👥 Human-Robot Interaction",
-    "🌐 Digital Interventions"
+    "Social Robots",
+    "Mental Health",
+    "Human-Robot Interaction",
+    "Digital Interventions"
   ],
 },
 
@@ -155,11 +155,11 @@ export const projects: Project[] = [
   ],
   image: "/files/project/smartspeaker.png",
   tags: [
-    "🔊 Smart Speaker",
-    "🧩 Context-Aware Sensing",
-    "🏠 Smart Home",
-    "🧑‍💻 Human-Centered Computing",
-    "💊 Digital Health"
+    "Smart Speaker",
+    "Context-Aware Sensing",
+    "Smart Home",
+    "Human-Centered Computing",
+    "Digital Health"
   ],
 news: [
   {
@@ -202,7 +202,7 @@ news: [
 
 {
   title: "Interactive Tool for Linking Smartphone Logs and Screen Video",
-  role: "Research Contributor",
+  role: "Collaborator",
   when: "Sep 2021 - Feb 2022",
   org: "", // 공동연구/논문 성격이라 org는 비워두거나 Lab 이름 넣을 수도 있음
   brief: [
@@ -210,16 +210,16 @@ news: [
   ],
   image: "/files/project/lee2022lvlinker.png", // 스크린샷 있으면, 없으면 제거
   tags: [
-    "📱 Mobile Interaction",
-    "🧑‍💻 UI/UX Research",
-    "🖥️ Data Visualization",
-    "🔗 Log-Video Synchronization"
+    "Mobile Interaction",
+    "UI/UX Research",
+    "Data Visualization",
+    "Log-Video Synchronization"
   ],
 },
 
 {
   title: "Accessible Art Exploration System for People with Visual Impairments",
-  role: "System Prototype Development",
+  role: "Collaborator",
   when: "2018 May - 2019 May",
   brief: [
     "Developed a touchscreen-based web system prototype that enables people with visual impairments to explore 2D artworks independently",
@@ -227,11 +227,11 @@ news: [
   ],
   image: "/files/project/accessart_prototype.png", // 샘플 이미지 (없으면 제거 가능)
   tags: [
-    "🎨 Accessibility",
-    "🖼️ Art & Culture",
-    "🌐 Web System",
-    "🧑‍🦯 Visual Impairments",
-    "🧑‍💻 Human-Centered Computing"
+    "Accessibility",
+    "Art & Culture",
+    "Web System",
+    "Visual Impairments",
+    "Human-Centered Computing"
   ],
 }
 

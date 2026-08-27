@@ -7,6 +7,12 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026-09-01",
+    title: "Starting Postdoc at the University of Tokyo 🎉",
+    desc: "Joining Prof. Koji Yatani's IIS Lab (Interactive Intelligent Systems) at the University of Tokyo as a Postdoctoral Researcher, supported by the NRF Postdoctoral Fellowship.",
+    link: "https://iis-lab.org/",
+  },
+  {
     date: "2025-01-16",
     title: "CHI Paper Accepted 🎉",
     desc: "Systematic review on stress sensing and intervention systems.\nTo be presented at CHI 2026 in Barcelona, Spain.",

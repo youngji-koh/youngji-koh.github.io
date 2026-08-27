@@ -24,22 +24,39 @@ export const venueColor: Record<string, string> = {
 
 // Publications (trimmed/beautified from CV)
 export const publications: Publication[]  = [
+//   {
+//     type: "Conference",
+//     code: "IMWUT",
+//     title:
+//       "Leveraging Smartphone Human Interaction Routine Behavior Task Mining and Modeling for Daily Stress Monitoring",
+//     authors: [
+//       "Hansoo Lee",
+//       "Taehyeon Park",
+//       "Youngji Koh",
+//       "Jaegil Lee",
+//       "Uichin Lee",
+//     ],
+//     meta: "UbiComp '26 • Shanghai, China (Oct 13–15, 2026)",
+//     year: 2026,
+//     href: "https://dl.acm.org/doi/10.1145/3770644",
+//     pdf: "files/publication/pdf/lee2025leveraging.pdf",
+//   },
   {
     type: "Conference",
-    code: "IMWUT",
+    code: "CHI",
     title:
-      "Leveraging Smartphone Human Interaction Routine Behavior Task Mining and Modeling for Daily Stress Monitoring",
+      "Exploring Data-Driven Approaches to Stress Management: A Systematic Review of Stress Tracking, Intervention, and System Evaluation Methods",
     authors: [
-      "Hansoo Lee",
-      "Taehyeon Park",
       "Youngji Koh",
-      "Jaegil Lee",
+      "Gwangyoung Lee",
+      "Jeonghyun Kim",
+      "Yugyeong Jung",
+      "Hwajung Hong",
       "Uichin Lee",
     ],
-    meta: "UbiComp '26",
+    meta: "CHI '26 • Barcelona, Spain (Apr 13–17, 2026)",
     year: 2026,
-    href: "https://dl.acm.org/doi/abs/10.1145/3749485",
-    pdf: "files/publication/pdf/lee2025leveraging.pdf",
+    href: "https://dl.acm.org/doi/10.1145/3772318.3791194",
   },
   {
     type: "Conference",
@@ -90,24 +107,24 @@ export const publications: Publication[]  = [
     pdf: "files/publication/pdf/lim2024exploring.pdf",
     slides: "/files/publication/slides/lim2024exploring.pdf"
   },
-  {
-    type: "Conference",
-    code: "CHI",
-    title:
-      "Interrupting for Microlearning: Understanding Perceptions and Interruptibility of Proactive Conversational Microlearning Services",
-    authors: [
-      "Minyeong Kim*",
-      "Jiwook Lee*",
-      "Youngji Koh",
-      "Chanhee Lee",
-      "Uichin Lee",
-      "Auk Kim",
-    ],
-    meta: "CHI '24 • Honolulu, USA (May 11–16, 2024)",
-    year: 2024,
-    href: "https://dl.acm.org/doi/10.1145/3613904.3642778",
-    pdf: "files/publication/pdf/kim2024interrupting.pdf"
-  },
+//   {
+//     type: "Conference",
+//     code: "CHI",
+//     title:
+//       "Interrupting for Microlearning: Understanding Perceptions and Interruptibility of Proactive Conversational Microlearning Services",
+//     authors: [
+//       "Minyeong Kim*",
+//       "Jiwook Lee*",
+//       "Youngji Koh",
+//       "Chanhee Lee",
+//       "Uichin Lee",
+//       "Auk Kim",
+//     ],
+//     meta: "CHI '24 • Honolulu, USA (May 11–16, 2024)",
+//     year: 2024,
+//     href: "https://dl.acm.org/doi/10.1145/3613904.3642778",
+//     pdf: "files/publication/pdf/kim2024interrupting.pdf"
+//   },
 //   {
 //     type: "Journal",
 //     code: "IEEE",
@@ -146,28 +163,28 @@ export const publications: Publication[]  = [
 //     meta: "IEEE VIS 2023 • Visual Analytics in Healthcare Workshop",
 //     year: 2023,
 //   },
-  {
-    type: "Poster",
-    code: "UIST",
-    title:
-      "LV-Linker: Supporting Fine-grained User Interaction Analyses by Linking Smartphone Log and Recorded Video Data",
-    authors: ["Hansoo Lee", "Sangwook Lee", "Youngji Koh", "Uichin Lee"],
-    meta: "UIST 2022",
-    year: 2022,
-    href: "https://dl.acm.org/doi/10.1145/3526114.3558714",
-    pdf: "files/publication/pdf/lee2022lvlinker.pdf",
-  },
-  {
-    type: "Poster",
-    code: "ASSETS",
-    title:
-      "Supporting Object-level Exploration of Artworks by Touch for People with Visual Impairments",
-    authors: ["Nahyun Kwon", "Youngji Koh", "Uran Oh"],
-    meta: "ASSETS 2019",
-    year: 2019,
-    href: "https://dl.acm.org/doi/10.1145/3308561.3354620",
-    pdf: "files/publication/pdf/kwon2019supporting.pdf"
-  },
+//   {
+//     type: "Poster",
+//     code: "UIST",
+//     title:
+//       "LV-Linker: Supporting Fine-grained User Interaction Analyses by Linking Smartphone Log and Recorded Video Data",
+//     authors: ["Hansoo Lee", "Sangwook Lee", "Youngji Koh", "Uichin Lee"],
+//     meta: "UIST 2022",
+//     year: 2022,
+//     href: "https://dl.acm.org/doi/10.1145/3526114.3558714",
+//     pdf: "files/publication/pdf/lee2022lvlinker.pdf",
+//   },
+//   {
+//     type: "Poster",
+//     code: "ASSETS",
+//     title:
+//       "Supporting Object-level Exploration of Artworks by Touch for People with Visual Impairments",
+//     authors: ["Nahyun Kwon", "Youngji Koh", "Uran Oh"],
+//     meta: "ASSETS 2019",
+//     year: 2019,
+//     href: "https://dl.acm.org/doi/10.1145/3308561.3354620",
+//     pdf: "files/publication/pdf/kwon2019supporting.pdf"
+//   },
 //   {
 //     type: "Poster",
 //     code: "KSC",
