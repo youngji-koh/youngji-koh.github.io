@@ -20,7 +20,7 @@ export const projects: Project[] = [
     title:
       "Development of an Early Prediction System for Complex Diseases",
     role: "Lead Researcher",
-    when: "Jun 2025 – Dec 2025",
+    when: "Jun 2025 – Aug 2026",
     org: "Institute for ICT Planning & Evaluation (IITP)",
     brief:
       ["Designed a comorbidity-aware framework that coordinates disorder-specific agents for diagnosis and intervention planning."],
