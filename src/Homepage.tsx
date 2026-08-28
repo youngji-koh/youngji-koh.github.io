@@ -3,6 +3,7 @@ import { profile } from "./data/profile";
 import { news, type NewsItem } from "./data/news";
 import { publications, type Publication } from "./data/publications";
 import { projects } from "./data/projects";
+import { patents, type Patent } from "./data/patents";
 
 // === Design notes ===
 // Two-column layout: a left sidebar (photo, contact, interests, education)
@@ -119,6 +120,7 @@ export default function PortfolioSite() {
           <div className="flex items-center gap-5 text-sm text-neutral-500">
             <NavLink href="#news">News</NavLink>
             <NavLink href="#publications">Publications</NavLink>
+            <NavLink href="#patents">Patents</NavLink>
             <NavLink href="#projects">Projects</NavLink>
           </div>
         </nav>
@@ -273,6 +275,36 @@ export default function PortfolioSite() {
                           )}
                         </div>
                       )}
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+
+              {/* Patents */}
+              <Section id="patents" title="Patents">
+                <ul className="space-y-6">
+                  {patents.map((pt: Patent, i: number) => (
+                    <li key={i}>
+                      <div className="flex items-center gap-2 text-[11px] uppercase tracking-wide text-neutral-500">
+                        <span className={`rounded-full border px-2 py-0.5 font-medium ${venueTagStyle}`}>{pt.region}</span>
+                        <span>{pt.status}</span>
+                      </div>
+
+                      <div className="mt-1.5 font-medium leading-snug text-neutral-900">{pt.title}</div>
+
+                      <div className="mt-1 text-sm text-neutral-600">
+                        {pt.inventors.map((inv, idx) => {
+                          const isMe = inv.toLowerCase() === "youngji koh";
+                          return (
+                            <span key={idx}>
+                              {isMe ? <span className="font-semibold text-neutral-900">{inv}</span> : inv}
+                              {idx < pt.inventors.length - 1 && <span>, </span>}
+                            </span>
+                          );
+                        })}
+                      </div>
+
+                      <div className="mt-1 text-sm text-neutral-500">{pt.meta}</div>
                     </li>
                   ))}
                 </ul>
