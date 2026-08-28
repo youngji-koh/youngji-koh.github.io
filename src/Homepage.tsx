@@ -7,11 +7,11 @@ import { projects } from "./data/projects";
 // === Design notes ===
 // Two-column layout: a left sidebar (photo, contact, interests, education)
 // beside a main column (news, publications, projects). The palette is white /
-// grey / charcoal with a single deep-burgundy accent. Content lives in
+// grey / charcoal with a single bronze accent. Content lives in
 // src/data/*; this file only handles layout & styling.
 
 // The page's single accent: bio links, section markers, and small flourishes.
-const ACCENT = "#7f2f3b";
+const ACCENT = "#8a5a2b";
 
 // ---------- Inline icons (monochrome, inherit text color) ----------
 const Icon = {
@@ -59,7 +59,7 @@ const SideHead = ({ children }: { children: React.ReactNode }) => (
 
 const Chip = ({ href, children }: { href?: string; children: React.ReactNode }) => {
   const cls =
-    "inline-flex items-center rounded-full border border-neutral-300 px-2.5 py-0.5 text-xs font-medium text-neutral-600 transition-colors hover:border-neutral-500 hover:text-neutral-900";
+    "inline-flex items-center whitespace-nowrap rounded-full border border-neutral-300 px-2.5 py-0.5 text-xs font-medium text-neutral-600 transition-colors hover:border-neutral-500 hover:text-neutral-900";
   return href ? (
     <a href={href} target="_blank" rel="noreferrer" className={cls}>{children}</a>
   ) : (
@@ -96,7 +96,7 @@ function Section({ id, title, children }: { id: string; title: string; children:
 }
 
 const accentLink =
-  "underline decoration-[#7f2f3b]/30 underline-offset-2 transition-colors hover:decoration-[#7f2f3b]";
+  "underline decoration-[#8a5a2b]/30 underline-offset-2 transition-colors hover:decoration-[#8a5a2b]";
 
 // Display label overrides for venue tags (IMWUT papers appear at UbiComp).
 const venueLabel: Record<string, string> = { IMWUT: "UbiComp" };
@@ -134,9 +134,9 @@ export default function PortfolioSite() {
                 alt={profile.name}
                 className="h-28 w-28 rounded-full object-cover object-left ring-1 ring-neutral-200"
               />
-              <h1 className="mt-4 font-serif text-2xl font-semibold tracking-tight text-neutral-900">{profile.name}</h1>
+              <h1 className="mt-4 text-2xl font-bold tracking-tight text-neutral-900">{profile.name}</h1>
               <span className="mt-2 block h-px w-10 self-center md:self-start" style={{ background: ACCENT }} />
-              <p className="mt-2.5 font-serif text-sm italic leading-snug text-neutral-500">
+              <p className="mt-2.5 text-sm leading-snug text-neutral-500">
                 Postdoctoral Researcher
                 <br />
                 University of Tokyo, IIS Lab

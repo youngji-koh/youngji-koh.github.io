@@ -25,7 +25,7 @@ export const projects: Project[] = [
     brief:
       ["Designed a comorbidity-aware framework that coordinates disorder-specific agents for diagnosis and intervention planning."],
     // thumb: "",
-    image: "/files/project/columbus.png",
+    image: "/files/project/choral.png",
      tags: [
       "LLM Agent",
       "Human-Centered Computing",

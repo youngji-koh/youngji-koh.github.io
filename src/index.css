@@ -1,50 +1,17 @@
+/* Google Fonts: Inter only */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* 1. Google Fonts 불러오기 */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Slab:wght@400;600;700&display=swap');
-
-/* 2. Tailwind 지시문 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 3. 글로벌 폰트 기본값 */
-/* html, body {
+html, body {
   font-family: 'Inter', 'Noto Sans KR', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-} */
-
-/* 글로벌 폰트 적용 (한 번만) */
-/* html, body {
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans KR', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-} */
- 
-/* html, body {
-  font-family: 'Noto Sans KR', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-} */
- 
-/* html, body {
-  font-family: 'Roboto Slab', serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-} */
-
-/* 4. 헤딩에 Roboto Slab 적용 */
-h1, h2, h3 {
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans KR', Arial, sans-serif;
-  /* font-family: 'Roboto Slab', 'Noto Sans KR', serif; */
-    /* font-family: 'Noto Sans KR', sans-serif; */
 }
 
-/* 5. 코드 블록 */
 code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
