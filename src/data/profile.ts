@@ -28,7 +28,7 @@ export type Profile = {
 
 export const profile: Profile = {
   name: "Youngji Koh",
-  email: "youngji@kaist.ac.kr",
+  email: "youngji@iis-lab.org",
   github: "https://github.com/youngji-koh",
   scholar: "https://scholar.google.com/citations?user=9YItZ30AAAAJ&hl=en&oi=ao",
   cvUrl: "/files/CV_Youngji Koh.pdf",
