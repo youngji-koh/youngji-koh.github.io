@@ -14,7 +14,7 @@ export const patents: Patent[] = [
     inventors: ["Uichin Lee", "Duri Lee", "Eunji Park", "Youngji Koh", "Yunjo Hahn"],
     region: "US",
     status: "Published",
-    meta: "U.S. Application No. 18/212,435 (filed Jun 2023) • Pub. No. US20240202623A1 (Jun 2024) • KR counterpart: 10-2024-0092527",
+    meta: "U.S. Application No. 18/212,435 (filed Jun 2023) • Pub. No. US20240202623A1 (Jun 2024)",
     year: 2024,
   },
   {
@@ -24,6 +24,15 @@ export const patents: Patent[] = [
     region: "KR",
     status: "Published",
     meta: "KR Application No. 10-2023-0060070 (filed May 2023) • Pub. No. 10-2024-0162897 (Nov 2024)",
+    year: 2024,
+  },
+  {
+    title:
+      "Human Digital Twinning Method and System of Emotional Regulation for Emotional Labor in Workplaces Using Multi-Modal Sensor Data",
+    inventors: ["Uichin Lee", "Duri Lee", "Eunji Park", "Youngji Koh", "Yunjo Hahn"],
+    region: "KR",
+    status: "Published",
+    meta: "KR Application No. 10-2023-0038174 (filed Mar 2023) • Pub. No. 10-2024-0092527 (Jun 2024)",
     year: 2024,
   },
   {

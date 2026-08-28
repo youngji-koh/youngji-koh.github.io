@@ -106,12 +106,6 @@ const venueLabel: Record<string, string> = { IMWUT: "UbiComp" };
 // the venue name itself carries the distinction.
 const venueTagStyle = "bg-neutral-100 text-neutral-700 border-neutral-200";
 
-// Patents are grouped the same way the CV lists them.
-const patentGroups: { region: Patent["region"]; label: string }[] = [
-  { region: "US", label: "International Patent Applications" },
-  { region: "KR", label: "Domestic Patents" },
-];
-
 // ---------- MAIN PAGE ----------
 export default function PortfolioSite() {
   const [showAllNews, setShowAllNews] = React.useState(false);
@@ -288,40 +282,32 @@ export default function PortfolioSite() {
 
               {/* Patents */}
               <Section id="patents" title="Patents">
-                <div className="space-y-8">
-                  {patentGroups.map((group) => {
-                    const items = patents.filter((pt) => pt.region === group.region);
-                    if (!items.length) return null;
-                    return (
-                      <div key={group.region}>
-                        <h3 className="text-sm font-semibold text-neutral-900">{group.label}</h3>
-                        <ul className="mt-4 space-y-6">
-                          {items.map((pt: Patent, i: number) => (
-                            <li key={i}>
-                              <span className={`inline-block rounded-full border px-2 py-0.5 text-[11px] font-medium uppercase tracking-wide ${venueTagStyle}`}>{pt.status}</span>
-
-                              <div className="mt-1.5 font-medium leading-snug text-neutral-900">{pt.title}</div>
-
-                              <div className="mt-1 text-sm text-neutral-600">
-                                {pt.inventors.map((inv, idx) => {
-                                  const isMe = inv.toLowerCase() === "youngji koh";
-                                  return (
-                                    <span key={idx}>
-                                      {isMe ? <span className="font-semibold text-neutral-900">{inv}</span> : inv}
-                                      {idx < pt.inventors.length - 1 && <span>, </span>}
-                                    </span>
-                                  );
-                                })}
-                              </div>
-
-                              <div className="mt-1 text-sm text-neutral-500">{pt.meta}</div>
-                            </li>
-                          ))}
-                        </ul>
+                <ul className="space-y-6">
+                  {patents.map((pt: Patent, i: number) => (
+                    <li key={i}>
+                      <div className="flex items-center gap-2 text-[11px] uppercase tracking-wide text-neutral-500">
+                        <span className={`rounded-full border px-2 py-0.5 font-medium ${venueTagStyle}`}>{pt.region}</span>
+                        <span>{pt.status}</span>
                       </div>
-                    );
-                  })}
-                </div>
+
+                      <div className="mt-1.5 font-medium leading-snug text-neutral-900">{pt.title}</div>
+
+                      <div className="mt-1 text-sm text-neutral-600">
+                        {pt.inventors.map((inv, idx) => {
+                          const isMe = inv.toLowerCase() === "youngji koh";
+                          return (
+                            <span key={idx}>
+                              {isMe ? <span className="font-semibold text-neutral-900">{inv}</span> : inv}
+                              {idx < pt.inventors.length - 1 && <span>, </span>}
+                            </span>
+                          );
+                        })}
+                      </div>
+
+                      <div className="mt-1 text-sm text-neutral-500">{pt.meta}</div>
+                    </li>
+                  ))}
+                </ul>
               </Section>
 
               {/* Projects */}
