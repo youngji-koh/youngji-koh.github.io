@@ -167,7 +167,7 @@ export default function PortfolioSite() {
             </div>
 
             <div>
-              <SideHead>Experience</SideHead>
+              <SideHead>Work Experience</SideHead>
               <ul className="space-y-3 text-sm">
                 {profile.experience.map((e, i) => (
                   <li key={i}>
