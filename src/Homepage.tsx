@@ -167,6 +167,20 @@ export default function PortfolioSite() {
             </div>
 
             <div>
+              <SideHead>Experience</SideHead>
+              <ul className="space-y-3 text-sm">
+                {profile.experience.map((e, i) => (
+                  <li key={i}>
+                    <div className="font-medium leading-snug text-neutral-900">{e.role}</div>
+                    <div className="text-neutral-600">{e.org}</div>
+                    <div className="text-neutral-500">{e.span}</div>
+                    {e.note && <div className="text-neutral-500">{e.note}</div>}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
               <SideHead>Education</SideHead>
               <ul className="space-y-3 text-sm">
                 {profile.education.map((e, i) => (

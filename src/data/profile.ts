@@ -5,6 +5,13 @@ export type EducationItem = {
   note?: string;
 };
 
+export type ExperienceItem = {
+  role: string;
+  org: string;
+  span: string;
+  note?: string;
+};
+
 export type Profile = {
   name: string;
   email: string;
@@ -12,6 +19,7 @@ export type Profile = {
   scholar: string;
   cvUrl: string;
   tagline: string;
+  experience: ExperienceItem[];
   education: EducationItem[];
   interests: string[];
   labName?: string;
@@ -29,6 +37,15 @@ export const profile: Profile = {
   tagline:
     "Ph.D. from KAIST (Interactive Computing Lab), incoming NRF Postdoctoral Fellow at the University of Tokyo (Prof. Koji Yatani's IIS Lab) — exploring digital health technologies for mental wellbeing",
 
+
+  experience: [
+    {
+      role: "Postdoctoral Researcher",
+      org: "IIS Lab, University of Tokyo",
+      span: "Sep 2026 — Aug 2027",
+      note: "NRF Postdoctoral Fellowship",
+    },
+  ],
 
   education: [
     {
