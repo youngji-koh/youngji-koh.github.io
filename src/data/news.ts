@@ -8,19 +8,19 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "2026-09-05",
-    title: "IEEE J-BHI Paper Accepted 🎉",
+    title: "IEEE J-BHI Paper Accepted 📄",
     desc: "Our paper on multimodal sensor fusion for depression and anxiety detection using mobile, wearable, and home IoT sensors was accepted to IEEE Journal of Biomedical and Health Informatics.",
     link: "https://doi.org/10.1109/JBHI.2026.3733235",
   },
   {
     date: "2026-09-01",
-    title: "Starting Postdoc at the University of Tokyo 🎉",
+    title: "Starting Postdoc at the University of Tokyo 🗼",
     desc: "Joining Prof. Koji Yatani's IIS Lab (Interactive Intelligent Systems) at the University of Tokyo as a Postdoctoral Researcher, supported by the NRF Postdoctoral Fellowship.",
     link: "https://iis-lab.org/",
   },
   {
     date: "2026-01-16",
-    title: "CHI Paper Accepted 🎉",
+    title: "CHI Paper Accepted 📝",
     desc: "Systematic review on stress sensing and intervention systems.\nTo be presented at CHI 2026 in Barcelona, Spain.",
   },
   {
@@ -30,7 +30,7 @@ export const news: NewsItem[] = [
   },
   {
     date: "2025-12-01",
-    title: "IMWUT Paper Accepted 🎉",
+    title: "IMWUT Paper Accepted 📑",
     desc: "Our paper, led by Hansoo Lee, was accepted to IMWUT",
   },
   {
