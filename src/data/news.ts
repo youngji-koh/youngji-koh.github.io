@@ -7,7 +7,7 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
-    date: "2026-09-10",
+    date: "2026-09-05",
     title: "IEEE J-BHI Paper Accepted 🎉",
     desc: "Our paper on multimodal sensor fusion for depression and anxiety detection using mobile, wearable, and home IoT sensors was accepted to IEEE Journal of Biomedical and Health Informatics.",
     link: "https://doi.org/10.1109/JBHI.2026.3733235",
