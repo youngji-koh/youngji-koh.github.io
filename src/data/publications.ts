@@ -24,6 +24,25 @@ export const venueColor: Record<string, string> = {
 
 // Publications (trimmed/beautified from CV)
 export const publications: Publication[]  = [
+  {
+    type: "Journal",
+    code: "J-BHI",
+    title:
+      "A Multimodal Sensor Fusion Approach for Mental Health Detection Using Mobile, Wearable, and IoT Sensors",
+    authors: [
+      "Youngji Koh",
+      "Gyuna Kim",
+      "Chanhee Lee",
+      "Panyu Zhang",
+      "Yunhee Ku",
+      "Inhwan Choi",
+      "Jewoo Ryu",
+      "Uichin Lee",
+    ],
+    meta: "IEEE Journal of Biomedical and Health Informatics, 2026 • Early Access",
+    year: 2026,
+    href: "https://doi.org/10.1109/JBHI.2026.3733235",
+  },
 //   {
 //     type: "Conference",
 //     code: "IMWUT",
@@ -78,25 +97,25 @@ export const publications: Publication[]  = [
     pdf: "files/publication/pdf/koh2025harnessing.pdf",
     slides: "files/publication/slides/koh2025harnessing.pdf"
   },
-  {
-    type: "Conference",
-    code: "CSCW",
-    title:
-      "‘In That Small Space with Just the Two of Us’: User Experiences with Cumpa in a Robotic Counseling Center",
-    authors: [
-      "Chanhee Lee*",
-      "Eunki Joung*",
-      "Youngji Koh",
-      "Esther Kim",
-      "Sohwi Son",
-      "Sunjung Kwon",
-      "Uichin Lee",
-    ],
-    meta: "CSCW '25 • Bergen, Norway (Oct 18–22, 2025)",
-    year: 2025,
-    href: "https://doi.org/10.1145/3757533",
-    pdf: "files/publication/pdf/lee2025in.pdf"
-  },
+//   {
+//     type: "Conference",
+//     code: "CSCW",
+//     title:
+//       "‘In That Small Space with Just the Two of Us’: User Experiences with Cumpa in a Robotic Counseling Center",
+//     authors: [
+//       "Chanhee Lee*",
+//       "Eunki Joung*",
+//       "Youngji Koh",
+//       "Esther Kim",
+//       "Sohwi Son",
+//       "Sunjung Kwon",
+//       "Uichin Lee",
+//     ],
+//     meta: "CSCW '25 • Bergen, Norway (Oct 18–22, 2025)",
+//     year: 2025,
+//     href: "https://doi.org/10.1145/3757533",
+//     pdf: "files/publication/pdf/lee2025in.pdf"
+//   },
   {
     type: "Conference",
     code: "CHI",
