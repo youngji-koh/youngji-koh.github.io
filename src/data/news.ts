@@ -13,13 +13,13 @@ export const news: NewsItem[] = [
     link: "https://iis-lab.org/",
   },
   {
-    date: "2026-08-22",
+    date: "2026-09-01",
     title: "IEEE J-BHI Paper Accepted 🎉",
     desc: "Our paper on multimodal sensor fusion for depression and anxiety detection using mobile, wearable, and home IoT sensors was accepted to IEEE Journal of Biomedical and Health Informatics.",
     link: "https://doi.org/10.1109/JBHI.2026.3733235",
   },
   {
-    date: "2025-01-16",
+    date: "2026-01-16",
     title: "CHI Paper Accepted 🎉",
     desc: "Systematic review on stress sensing and intervention systems.\nTo be presented at CHI 2026 in Barcelona, Spain.",
   },
