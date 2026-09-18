@@ -10,7 +10,7 @@ export type Patent = {
 export const patents: Patent[] = [
   {
     title:
-      "Multi-Agent-Based Digital Healthcare System and Method for Diagnosis and Intervention of Comorbid Mental Health Conditions",
+      "Multi-Agent Based Digital Healthcare System for Comorbidity-Aware Mental Health Diagnosis and Intervention",
     inventors: ["Youngji Koh", "Hyunsoo Lee", "Uichin Lee"],
     region: "KR",
     status: "Filed",
