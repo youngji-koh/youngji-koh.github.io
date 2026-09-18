@@ -2,12 +2,21 @@ export type Patent = {
   title: string;
   inventors: string[];
   region: "US" | "KR";
-  status: "Granted" | "Published";
+  status: "Granted" | "Published" | "Filed";
   meta: string;   // application / publication numbers and dates
   year: number;
 };
 
 export const patents: Patent[] = [
+  {
+    title:
+      "Multi-Agent-Based Digital Healthcare System and Method for Diagnosis and Intervention of Comorbid Mental Health Conditions",
+    inventors: ["Uichin Lee", "Hyunsoo Lee", "Youngji Koh"],
+    region: "KR",
+    status: "Filed",
+    meta: "KR Application No. 10-2026-0006792 (filed Jan 2026)",
+    year: 2026,
+  },
   {
     title:
       "Human Digital Twinning Method and System of Emotional Regulation for Emotional Labor in Workplaces Using Multi-Modal Sensor Data",
