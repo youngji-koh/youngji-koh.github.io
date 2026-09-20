@@ -11,7 +11,7 @@ export const patents: Patent[] = [
   {
     title:
       "Multi-Agent Based Digital Healthcare System for Comorbidity-Aware Mental Health Diagnosis and Intervention",
-    inventors: ["Youngji Koh", "Hyunsoo Lee", "Uichin Lee"],
+    inventors: ["Uichin Lee", "Youngji Koh", "Hyunsoo Lee"],
     region: "KR",
     status: "Filed",
     meta: "KR Application No. 10-2026-0006792 (filed Jan 2026)",
